@@ -66,6 +66,10 @@
     <Compile Include="Entities\Grade.cs" />
     <Compile Include="Entities\Location.cs" />
     <Compile Include="Entities\Order.cs" />
+    <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\ProductColorMap.cs" />
+    <Compile Include="Entities\ProductOrderMap.cs" />
+    <Compile Include="Entities\ProductSizeMap.cs" />
     <Compile Include="Entities\ProductUnit.cs" />
     <Compile Include="Entities\Size.cs" />
     <Compile Include="Entities\Token.cs" />
@@ -76,6 +80,14 @@
     <Compile Include="Migrations\202305081521286_Dbinit.cs" />
     <Compile Include="Migrations\202305081521286_Dbinit.designer.cs">
       <DependentUpon>202305081521286_Dbinit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305111423590_MappingTAbleAdded.cs" />
+    <Compile Include="Migrations\202305111423590_MappingTAbleAdded.designer.cs">
+      <DependentUpon>202305111423590_MappingTAbleAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305111428403_NewMappingOrderAdded.cs" />
+    <Compile Include="Migrations\202305111428403_NewMappingOrderAdded.designer.cs">
+      <DependentUpon>202305111428403_NewMappingOrderAdded.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MMContext.cs" />
@@ -93,6 +105,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202305081521286_Dbinit.resx">
       <DependentUpon>202305081521286_Dbinit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305111423590_MappingTAbleAdded.resx">
+      <DependentUpon>202305111423590_MappingTAbleAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305111428403_NewMappingOrderAdded.resx">
+      <DependentUpon>202305111428403_NewMappingOrderAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

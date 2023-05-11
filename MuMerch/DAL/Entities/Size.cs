@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
 namespace DAL.Entities
 {
@@ -22,5 +23,10 @@ namespace DAL.Entities
         [ForeignKey("User")]
         public string UpdatedBy { get; set; }
         public virtual User User { get; set; }
+        public virtual ICollection<ProductSizeMap> ProductSizeMaps { get; set; }
+        public Size()
+        {
+            ProductSizeMaps = new List<ProductSizeMap>();
+        }
     }
 }
