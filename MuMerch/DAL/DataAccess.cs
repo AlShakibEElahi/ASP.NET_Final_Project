@@ -27,5 +27,30 @@ namespace DAL
         {
             return new UnitRepo();
         }
+        public static IBaseRepo<Department, int, int, Department> DepartmentContent()
+        {
+            return new DepartmentRepo();
+        }
+        public static IBaseRepo<Color, int, int, Color> ColorContent()
+        {
+            return new ColorRepo();
+        }
+        public static IBaseRepo<Customer, int, int, Customer> CustomerContent()
+        {
+            return new CustomerRepo();
+        }
+        public static IBaseRepo<Product, int, int, Product> ProductContent()
+        {
+            return new ProductRepo();
+        }
+
+        public static IBaseRepo<ProductColorMap, int, int, ProductColorMap> ProductColorMapContent()
+        {
+            return new ProductColorMapRepo();
+        }
+        public static IBaseRepo<ProductOrderMap, int, int, ProductOrderMap> ProductOrderMapContent()
+        {
+            return new ProductOrderMapRepo();
+        }
     }
 }

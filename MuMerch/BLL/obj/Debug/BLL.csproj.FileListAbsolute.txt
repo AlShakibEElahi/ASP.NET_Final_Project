@@ -40,3 +40,17 @@ D:\Codes\ASP.NET_Final_Project\MuMerch\BLL\obj\Debug\BLL.csproj.CoreCompileInput
 D:\Codes\ASP.NET_Final_Project\MuMerch\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\Codes\ASP.NET_Final_Project\MuMerch\BLL\obj\Debug\BLL.dll
 D:\Codes\ASP.NET_Final_Project\MuMerch\BLL\obj\Debug\BLL.pdb
+D:\github\ASP.NET_Final_Project\MuMerch\BLL\bin\Debug\BLL.dll
+D:\github\ASP.NET_Final_Project\MuMerch\BLL\bin\Debug\BLL.pdb
+D:\github\ASP.NET_Final_Project\MuMerch\BLL\bin\Debug\AutoMapper.dll
+D:\github\ASP.NET_Final_Project\MuMerch\BLL\bin\Debug\DAL.dll
+D:\github\ASP.NET_Final_Project\MuMerch\BLL\bin\Debug\EntityFramework.dll
+D:\github\ASP.NET_Final_Project\MuMerch\BLL\bin\Debug\DAL.pdb
+D:\github\ASP.NET_Final_Project\MuMerch\BLL\bin\Debug\DAL.dll.config
+D:\github\ASP.NET_Final_Project\MuMerch\BLL\bin\Debug\AutoMapper.xml
+D:\github\ASP.NET_Final_Project\MuMerch\BLL\bin\Debug\EntityFramework.xml
+D:\github\ASP.NET_Final_Project\MuMerch\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\github\ASP.NET_Final_Project\MuMerch\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\github\ASP.NET_Final_Project\MuMerch\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\github\ASP.NET_Final_Project\MuMerch\BLL\obj\Debug\BLL.dll
+D:\github\ASP.NET_Final_Project\MuMerch\BLL\obj\Debug\BLL.pdb

@@ -34,3 +34,17 @@ D:\Codes\MuMerch\MuMerch\DAL\obj\Debug\DAL.Migrations.Dbinit.resources
 D:\Codes\MuMerch\MuMerch\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
 D:\Codes\MuMerch\MuMerch\DAL\obj\Debug\DAL.Migrations.MappingTAbleAdded.resources
 D:\Codes\MuMerch\MuMerch\DAL\obj\Debug\DAL.Migrations.NewMappingOrderAdded.resources
+D:\github\ASP.NET_Final_Project\MuMerch\DAL\bin\Debug\DAL.dll.config
+D:\github\ASP.NET_Final_Project\MuMerch\DAL\bin\Debug\DAL.dll
+D:\github\ASP.NET_Final_Project\MuMerch\DAL\bin\Debug\DAL.pdb
+D:\github\ASP.NET_Final_Project\MuMerch\DAL\bin\Debug\EntityFramework.dll
+D:\github\ASP.NET_Final_Project\MuMerch\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\github\ASP.NET_Final_Project\MuMerch\DAL\bin\Debug\EntityFramework.xml
+D:\github\ASP.NET_Final_Project\MuMerch\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.dll
+D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.pdb
+D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.Migrations.new_database.resources
+D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.GenerateResource.cache

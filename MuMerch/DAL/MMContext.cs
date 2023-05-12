@@ -13,6 +13,9 @@ namespace DAL
         public DbSet<Division> Divisions { get; set; }
         public DbSet<Grade> Grades { get; set; }
         public DbSet<Location> Locations { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductColorMap> ProductColorMaps { get; set; }
+        public DbSet<ProductOrderMap> ProductOrderMaps { get; set; }
         public DbSet<ProductUnit> ProductUnits { get; set; }
         public DbSet<Size> Sizes { get; set; }
         public DbSet<Unit> Units { get; set; }

@@ -100,7 +100,13 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Auth\Logged.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\ColorController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\GradeController.cs" />
+    <Compile Include="Controllers\ProductColorMapController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProductOrderMapController.cs" />
     <Compile Include="Controllers\UnitController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
