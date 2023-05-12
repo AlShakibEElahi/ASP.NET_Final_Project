@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\BandDTO.cs" />
     <Compile Include="DTOs\ColorDTO.cs" />
     <Compile Include="DTOs\CustomerDTO.cs" />
     <Compile Include="DTOs\DepartmentDTO.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="DTOs\UserDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AuthService.cs" />
+    <Compile Include="Services\BandService.cs" />
     <Compile Include="Services\ColorService.cs" />
     <Compile Include="Services\CustomerService.cs" />
     <Compile Include="Services\DepartmentService.cs" />

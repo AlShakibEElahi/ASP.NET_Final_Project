@@ -46,8 +46,6 @@ D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.CoreCompileInpu
 D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.dll
 D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.pdb
-D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.Migrations.new_database.resources
-D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
 D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\bin\Debug\DAL.dll.config
 D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\bin\Debug\DAL.dll
 D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\bin\Debug\DAL.pdb
@@ -62,3 +60,5 @@ D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.dll
 D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.pdb
 D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.Migrations.BB.resources
 D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.Migrations.InitDb.resources
+D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.GenerateResource.cache

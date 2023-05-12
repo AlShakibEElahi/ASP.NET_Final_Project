@@ -60,5 +60,9 @@ namespace DAL
         {
             return new SizeRepo();
         }
+        public static IBaseRepo<Band, int, int, Band> BandContent()
+        {
+            return new BandRepo();
+        }
     }
 }
