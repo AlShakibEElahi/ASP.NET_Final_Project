@@ -8,9 +8,7 @@ using System.Threading.Tasks;
 namespace BLL.DTOs
 {
     public class ProductColorMapDTO
-    {
-        public int Id { get; set; }
-        
+    {   
         public int ProductId { get; set; }
        
         public int ColorId { get; set; }

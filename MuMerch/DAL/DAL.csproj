@@ -77,9 +77,9 @@
     <Compile Include="Entities\User.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IBaseRepo.cs" />
-    <Compile Include="Migrations\202305111717450_new_database.cs" />
-    <Compile Include="Migrations\202305111717450_new_database.designer.cs">
-      <DependentUpon>202305111717450_new_database.cs</DependentUpon>
+    <Compile Include="Migrations\202305120537579_dbinit.cs" />
+    <Compile Include="Migrations\202305120537579_dbinit.designer.cs">
+      <DependentUpon>202305120537579_dbinit.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MMContext.cs" />
@@ -87,11 +87,13 @@
     <Compile Include="Repos\ColorRepo.cs" />
     <Compile Include="Repos\CustomerRepo.cs" />
     <Compile Include="Repos\DepartmentRepo.cs" />
+    <Compile Include="Repos\EmployeeRepo.cs" />
     <Compile Include="Repos\GradeRepo.cs" />
     <Compile Include="Repos\BaseRepo.cs" />
     <Compile Include="Repos\ProductColorMapRepo.cs" />
     <Compile Include="Repos\ProductOrderMapRepo.cs" />
     <Compile Include="Repos\ProductRepo.cs" />
+    <Compile Include="Repos\SizeRepo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />
     <Compile Include="Repos\UnitRepo.cs" />
     <Compile Include="Repos\UserRepo.cs" />
@@ -101,8 +103,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202305111717450_new_database.resx">
-      <DependentUpon>202305111717450_new_database.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202305120537579_dbinit.resx">
+      <DependentUpon>202305120537579_dbinit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

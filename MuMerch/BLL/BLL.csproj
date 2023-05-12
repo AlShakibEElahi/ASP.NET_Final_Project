@@ -48,6 +48,7 @@
     <Compile Include="DTOs\ColorDTO.cs" />
     <Compile Include="DTOs\CustomerDTO.cs" />
     <Compile Include="DTOs\DepartmentDTO.cs" />
+    <Compile Include="DTOs\EmployeeDTO.cs" />
     <Compile Include="DTOs\GradeDTO.cs" />
     <Compile Include="DTOs\ProductColorMapDTO.cs" />
     <Compile Include="DTOs\ProductDTO.cs" />
@@ -62,10 +63,12 @@
     <Compile Include="Services\ColorService.cs" />
     <Compile Include="Services\CustomerService.cs" />
     <Compile Include="Services\DepartmentService.cs" />
+    <Compile Include="Services\EmployeeService.cs" />
     <Compile Include="Services\GradeService.cs" />
     <Compile Include="Services\ProductColorMapService.cs" />
     <Compile Include="Services\ProductOrderMapService.cs" />
     <Compile Include="Services\ProductService.cs" />
+    <Compile Include="Services\SizeService.cs" />
     <Compile Include="Services\UnitService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>

@@ -8,35 +8,35 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class UnitRepo : BaseRepo, IBaseRepo<Unit, int, int, Unit>
+    internal class SizeRepo : BaseRepo, IBaseRepo<Size, int, int, Size>
     {
-        public int Delete(Unit unit)
+        public int Delete(Size size)
         {
-            var data = mmContext.Units.Find(unit.Id);
-            mmContext.Units.Remove(unit);
+            var data = mmContext.Sizes.Find(size.Id);
+            mmContext.Sizes.Remove(size);
             return mmContext.SaveChanges();
         }
 
-        public List<Unit> GetAll()
+        public List<Size> GetAll()
         {
-            return mmContext.Units.ToList();
+            return mmContext.Sizes.ToList();
         }
 
-        public Unit GetById(int id)
+        public Size GetById(int id)
         {
-            var data = mmContext.Units.Find(id);
+            var data = mmContext.Sizes.Find(id);
             return data;
         }
 
-        public int Insert(Unit obj)
+        public int Insert(Size obj)
         {
-            mmContext.Units.Add(obj);
+            mmContext.Sizes.Add(obj);
             return mmContext.SaveChanges();
         }
 
-        public int Update(Unit obj)
+        public int Update(Size obj)
         {
-            var data = mmContext.Units.Find(obj.Id);
+            var data = mmContext.Sizes.Find(obj.Id);
             mmContext.Entry(data).CurrentValues.SetValues(obj);
             return mmContext.SaveChanges();
         }

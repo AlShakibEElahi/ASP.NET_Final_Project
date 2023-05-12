@@ -52,5 +52,13 @@ namespace DAL
         {
             return new ProductOrderMapRepo();
         }
+        public static IBaseRepo<Employee, int, string, Employee> EmployeeContent()
+        {
+            return new EmployeeRepo();
+        }
+        public static IBaseRepo<Size, int, int, Size> SizeContent()
+        {
+            return new SizeRepo();
+        }
     }
 }

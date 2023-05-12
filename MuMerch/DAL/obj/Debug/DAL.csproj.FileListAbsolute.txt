@@ -48,3 +48,17 @@ D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.dll
 D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.pdb
 D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.Migrations.new_database.resources
 D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\bin\Debug\DAL.dll.config
+D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\bin\Debug\DAL.dll
+D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\bin\Debug\DAL.pdb
+D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\bin\Debug\EntityFramework.dll
+D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\bin\Debug\EntityFramework.xml
+D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.dll
+D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.pdb
+D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.Migrations.dbinit.resources
+D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
