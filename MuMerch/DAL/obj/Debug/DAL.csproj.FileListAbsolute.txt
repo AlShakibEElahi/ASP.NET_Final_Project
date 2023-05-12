@@ -60,5 +60,5 @@ D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.CoreCompileInput
 D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.dll
 D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.pdb
-D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.Migrations.dbinit.resources
+D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.Migrations.BB.resources
 D:\Codes\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
