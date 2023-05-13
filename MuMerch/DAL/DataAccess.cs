@@ -1,6 +1,7 @@
 ﻿using DAL.Entities;
 using DAL.Interfaces;
 using DAL.Repos;
+using System;
 using System.Collections;
 
 namespace DAL
@@ -63,6 +64,50 @@ namespace DAL
         public static IBaseRepo<Band, int, int, Band> BandContent()
         {
             return new BandRepo();
+        }
+        public static IBaseRepo<Designation, int, int, Designation> DesignationContent()
+        {
+            return new DesignationRepo();
+        }
+
+        public static IBaseRepo<ProductSizeMap, int, int, ProductSizeMap> ProductSizeMapContent()
+        {
+            return new ProductSizeMapRepo();
+        }
+        public static IBaseRepo<Gig, int, int, Gig> GigContent()
+        {
+            return new GigRepo();
+        }
+
+        public static IBaseRepo<Division, int, int, Division> DivisionContent()
+        {
+            return new DivisionRepo();
+        }
+
+        public static IBaseRepo<BandManager, int, int, BandManager> BandManagerContent()
+        {
+            return new BandManagerRepo();
+        }
+
+        public static IBaseRepo<Category, int, int, Category> CategoryContent()
+        {
+            return new CategoryRepo();
+        }
+
+
+        public static IBaseRepo<GigManager, int, int, GigManager> GigManagerContent()
+        {
+            return new GigManagerRepo();
+        }
+
+        public static IBaseRepo<Location, int, int, Location> LocationContent()
+        {
+            return new LocationRepo();
+        }
+
+        public static IBaseRepo<Order, int, int, Order> OrderContent()
+        {
+            return new OrderRepo();
         }
     }
 }

@@ -77,23 +77,32 @@
     <Compile Include="Entities\User.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IBaseRepo.cs" />
-    <Compile Include="Migrations\202305120853415_Init Db.cs" />
-    <Compile Include="Migrations\202305120853415_Init Db.designer.cs">
-      <DependentUpon>202305120853415_Init Db.cs</DependentUpon>
+    <Compile Include="Migrations\202305121448070_a.cs" />
+    <Compile Include="Migrations\202305121448070_a.designer.cs">
+      <DependentUpon>202305121448070_a.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MMContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\BandManagerRepo.cs" />
     <Compile Include="Repos\BandRepo.cs" />
+    <Compile Include="Repos\CategoryRepo.cs" />
     <Compile Include="Repos\ColorRepo.cs" />
     <Compile Include="Repos\CustomerRepo.cs" />
     <Compile Include="Repos\DepartmentRepo.cs" />
+    <Compile Include="Repos\DesignationRepo.cs" />
+    <Compile Include="Repos\DivisionRepo.cs" />
     <Compile Include="Repos\EmployeeRepo.cs" />
+    <Compile Include="Repos\GigManagerRepo.cs" />
+    <Compile Include="Repos\GigRepo.cs" />
     <Compile Include="Repos\GradeRepo.cs" />
     <Compile Include="Repos\BaseRepo.cs" />
+    <Compile Include="Repos\LocationRepo.cs" />
+    <Compile Include="Repos\OrderRepo.cs" />
     <Compile Include="Repos\ProductColorMapRepo.cs" />
     <Compile Include="Repos\ProductOrderMapRepo.cs" />
     <Compile Include="Repos\ProductRepo.cs" />
+    <Compile Include="Repos\ProductSizeMapRepo.cs" />
     <Compile Include="Repos\SizeRepo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />
     <Compile Include="Repos\UnitRepo.cs" />
@@ -104,8 +113,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202305120853415_Init Db.resx">
-      <DependentUpon>202305120853415_Init Db.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202305121448070_a.resx">
+      <DependentUpon>202305121448070_a.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
