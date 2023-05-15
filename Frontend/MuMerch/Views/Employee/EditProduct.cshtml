@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "EditProduct";
+    Layout = "~/Views/Shared/_Employee.cshtml";
+}
+<h2>Edit Product</h2>
+@if (ViewBag.Message != null)
+{
+    <br />
+    <span class="text-danger">@ViewBag.Message</span>
+    <br />
+}
+<form method="post">
+    Name:<br /><input type="text" name="Name" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span><br />
+    Category:<br /><input type="text" name="Category" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Category")</span><br />
+    Band:<br /><input type="text" name="Band" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Band")</span><br />
+    Updated By:<br /><input type="number" name="UpdatedBy" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Updated By")</span><br />
+    Updated At:<br /><input type="datetime" name="UpdatedAt" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Updated At")</span><br />
+    Color Code:<br /><input type="color" name="ColorCode" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Image")</span><br />
+    Quantity:<br /><input type="number" name="Quantity" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Quantity")</span><br />
+    Buying Price:<br /><input type="number" name=" BuyingPrice" /><br />
+    <span class="text-danger">@Html.ValidationMessage("BuyingPrice")</span><br />
+    Selling Price:<br /><input type="number" name="SellingPrice" /><br />
+    <span class="text-danger">@Html.ValidationMessage("SellingPrice")</span><br />
+    Revenue Percentage:<br /><input type="number" name="RevenuePercentage" /><br />
+    <span class="text-danger">@Html.ValidationMessage("RevenuePercentage")</span><br />
+    <input type="submit" class="btn btn-success" value="Edit" />
+
+</form>

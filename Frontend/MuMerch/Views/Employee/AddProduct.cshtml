@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "AddProduct";
+    Layout = "~/Views/Shared/_Employee.cshtml";
+}
+
+<h2>AddProduct</h2>
+@if (ViewBag.Message != null)
+{
+    <br />
+    <span class="text-danger">@ViewBag.Message</span>
+    <br />
+}
+<form method="post">
+    Name:<br /><input type="text" name="Name" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span><br />
+    Updated By:<br /><input type="number" name="UpdatedBy" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Updated By")</span><br />
+    Updated At:<br /><input type="datetime" name="UpdatedAt" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Updated At")</span><br />
+    Image:<br /><input type="number" name="Image" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Image")</span><br />
+    Quantity:<br /><input type="number" name="Quantity" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Quantity")</span><br />
+    BuyingPrice:<br /><input type="number" name=" BuyingPrice" /><br />
+    <span class="text-danger">@Html.ValidationMessage("BuyingPrice")</span><br />
+    SellingPrice:<br /><input type="number" name="SellingPrice" /><br />
+    <span class="text-danger">@Html.ValidationMessage("SellingPrice")</span><br />
+    RevenuePercentage:<br /><input type="number" name="RevenuePercentage" /><br />
+    <span class="text-danger">@Html.ValidationMessage("RevenuePercentage")</span><br />
+    ProUnitId:<br /><input type="number" name="ProUnitId" /><br />
+    <span class="text-danger">@Html.ValidationMessage("ProUnitId")</span><br />
+    CategoryId:<br /><input type="number" name="CategoryId" /><br />
+    <span class="text-danger">@Html.ValidationMessage("CategoryId")</span><br />
+    BandId:<br /><input type="number" name="BandId" /><br />
+    <span class="text-danger">@Html.ValidationMessage("BandId")</span><br />
+    GigId:<br /><input type="number" name="GigId" /><br />
+    <span class="text-danger">@Html.ValidationMessage("GigId")</span><br />
+
+    <input type="submit" class="btn btn-success" value="Submit" />
+</form>

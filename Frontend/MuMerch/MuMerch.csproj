@@ -241,11 +241,18 @@
     <Content Include="Views\Admin\AddColor.cshtml" />
     <Content Include="Views\Admin\EditUser.cshtml" />
     <Content Include="Views\Admin\DeleteUser.cshtml" />
+    <Content Include="Views\Employee\AddProduct.cshtml" />
+    <Content Include="Views\Employee\ProductList.cshtml" />
+    <Content Include="Views\Employee\AddSize.cshtml" />
+    <Content Include="Views\Employee\AddColor.cshtml" />
+    <Content Include="Views\Employee\EditProduct.cshtml" />
+    <Content Include="Views\Employee\DeleteProduct.cshtml" />
+    <Content Include="Views\Employee\SizeList.cshtml" />
+    <Content Include="Views\Employee\ColorList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\BandManager\" />
-    <Folder Include="Views\Employee\" />
     <Folder Include="Views\GigManager\" />
   </ItemGroup>
   <ItemGroup>
