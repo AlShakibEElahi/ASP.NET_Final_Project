@@ -6,11 +6,8 @@ namespace DAL.Entities
 {
     public class User
     {
-        [Key]
         [Required]
-        public string Id { get; set; }
-        [Required]
-        [StringLength(150)]
+        [StringLength(70)]
         public string Name { get; set; }
         [Required]
         public DateTime DateOfBirth { get; set; }
@@ -20,6 +17,8 @@ namespace DAL.Entities
         public string Image { get; set; }
         [Required]
         public string UserType { get; set; }
+        [Key]
+        [Required]
         [StringLength(70)]
         public string Email { get; set; }
         [Required]

@@ -85,6 +85,10 @@
     <Compile Include="Migrations\202305150535534_DbChanges.designer.cs">
       <DependentUpon>202305150535534_DbChanges.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305150846108_fb.cs" />
+    <Compile Include="Migrations\202305150846108_fb.designer.cs">
+      <DependentUpon>202305150846108_fb.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MMContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -122,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305150535534_DbChanges.resx">
       <DependentUpon>202305150535534_DbChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305150846108_fb.resx">
+      <DependentUpon>202305150846108_fb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

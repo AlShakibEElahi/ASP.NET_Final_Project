@@ -45,6 +45,61 @@ namespace MuMerch.Controllers
                 return View();
             }
         }
+        public ActionResult EditUser()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<ActionResult> EditUser(User user)
+        {
+            user.Image = "1";
+            try
+            {
+                var token = await MuMerchClientPost.Post<int>("user/edit", user);
+                if (token > 0)
+                {
+
+                    return RedirectToAction("UserList");
+                }
+                else
+                {
+                    ViewBag.Message = "Invalid login credentials";
+                    return View();
+                }
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Message = "Error logging in: " + ex.Message;
+                return View();
+            }
+        }
+        public ActionResult DeleteUser()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<ActionResult> DeleteUser(User user)
+        {
+            try
+            {
+                var token = await MuMerchClientPost.Post<int>("user/delete", user);
+                if (token > 0)
+                {
+
+                    return RedirectToAction("UserList");
+                }
+                else
+                {
+                    ViewBag.Message = "Invalid login credentials";
+                    return View();
+                }
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Message = "Error logging in: " + ex.Message;
+                return View();
+            }
+        }
         [HttpGet]
         public ActionResult UserList()
         {

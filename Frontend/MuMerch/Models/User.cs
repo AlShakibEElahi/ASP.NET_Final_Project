@@ -8,7 +8,6 @@ namespace MuMerch.Models
 {
     public class User
     {
-        public string Id { get; set; }
         [Required]
         [StringLength(150)]
         public string Name { get; set; }
@@ -20,6 +19,7 @@ namespace MuMerch.Models
         public string Image { get; set; }
         [Required]
         public string UserType { get; set; }
+        [Required]
         [StringLength(70)]
         public string Email { get; set; }
         [Required]

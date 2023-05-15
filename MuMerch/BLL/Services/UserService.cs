@@ -62,7 +62,6 @@ namespace BLL.Services
         {
             return new UserDTO()
             {
-                Id = user.Id,
                 Name = user.Name,
                 BloodGroup = user.BloodGroup,
                 Password = user.Password,
@@ -86,7 +85,6 @@ namespace BLL.Services
         {
             return new User()
             {
-                Id = user.Id,
                 Name = user.Name,
                 BloodGroup = user.BloodGroup,
                 Password = user.Password,

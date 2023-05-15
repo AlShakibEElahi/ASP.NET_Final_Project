@@ -91,3 +91,4 @@ D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.pdb
 D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.Migrations.Dbinit.resources
 D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
 D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.Migrations.DbChanges.resources
+D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.Migrations.fb.resources

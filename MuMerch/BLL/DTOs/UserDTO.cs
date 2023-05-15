@@ -9,7 +9,6 @@ namespace BLL.DTOs
 {
     public class UserDTO
     {
-        public string Id { get; set; }
         [Required]
         [StringLength(150)]
         public string Name { get; set; }
@@ -21,6 +20,7 @@ namespace BLL.DTOs
         public string Image { get; set; }
         [Required]
         public string UserType { get; set; }
+        [Required]
         [StringLength(70)]
         public string Email { get; set; }
         [Required]

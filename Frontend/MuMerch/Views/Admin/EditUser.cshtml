@@ -1,14 +1,15 @@
 ﻿
 @{
-    ViewBag.Title = "AddUser";
+    ViewBag.Title = "EditUser";
     Layout = "~/Views/Shared/_Admin.cshtml";
 }
-<h2>Add User</h2>
+
+<h2>EditUser</h2>
 @if (ViewBag.Message != null)
 {
-    <br />
-    <span class="text-danger">@ViewBag.Message</span>
-    <br />
+<br />
+<span class="text-danger">@ViewBag.Message</span>
+<br />
 }
 <form method="post">
     Name:<br /><input type="text" name="Name" /><br />
@@ -41,7 +42,7 @@
         <option value="Gig Manager">GigManager</option>
     </select>
     <span class="text-danger">@Html.ValidationMessage("UserType")</span><br />
-    <input type="submit" class="btn btn-success" value="Add" />
+    <input type="submit" class="btn btn-success" value="Edit" />
 
 </form>
 
