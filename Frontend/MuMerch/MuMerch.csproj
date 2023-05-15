@@ -232,10 +232,16 @@
     <Content Include="Views\Shared\_BandManager.cshtml" />
     <Content Include="Views\Shared\_GigManager.cshtml" />
     <Content Include="Views\Auth\Login.cshtml" />
+    <Content Include="Views\Auth\Index.cshtml" />
+    <Content Include="Views\Admin\UserList.cshtml" />
+    <Content Include="Views\Admin\AddUser.cshtml" />
+    <Content Include="Views\Admin\SizeList.cshtml" />
+    <Content Include="Views\Admin\AddSize.cshtml" />
+    <Content Include="Views\Admin\ColorList.cshtml" />
+    <Content Include="Views\Admin\AddColor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Admin\" />
     <Folder Include="Views\BandManager\" />
     <Folder Include="Views\Employee\" />
     <Folder Include="Views\GigManager\" />

@@ -18,7 +18,6 @@ namespace MuMerch.Models
         public string ColorCode { get; set; }
         [Required]
         public bool IsActive { get; set; }
-        [Required]
         public DateTime UpdatedAt { get; set; }
         [ForeignKey("User")]
         public string UpdatedBy { get; set; }

@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "AddColor";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>AddColor</h2>
+<form method="post">
+    Name:<br /><input type="text" name="Name" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span><br />
+    Color Code:<br /><input type="color" name="ColorCode" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Image")</span><br />
+    Is Active:<br /><select class="form-control" name="IsActive">
+                        <option selected disabled>Select</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+    <span class="text-danger">@Html.ValidationMessage("IsActive")</span><br />
+    <input type="submit" class="btn btn-success" value="Submit" />
+</form>
+

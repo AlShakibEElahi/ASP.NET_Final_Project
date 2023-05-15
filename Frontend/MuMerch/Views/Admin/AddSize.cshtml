@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "AddSize";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>AddSize</h2>
+<form method="post">
+    Name:<br /><input type="text" name="Name" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span><br />
+    Image:<br /><input type="text" name="Image" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Image")</span><br />
+    On Board Date:<br /><input type="text" name="OnBoardDate" /><br />
+    <span class="text-danger">@Html.ValidationMessage("On Board Date")</span><br />
+    Is Active:<br /><input type="number" name="IsActive" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Is Active")</span><br />
+    Updated By:<br /><input type="number" name="UpdatedBy" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Updated By")</span><br />
+    Updated At:<br /><input type="datetime" name="UpdatedAt" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Updated At")</span><br />
+    <input type="submit" class="btn btn-success" value="Add" />
+</form>
+
