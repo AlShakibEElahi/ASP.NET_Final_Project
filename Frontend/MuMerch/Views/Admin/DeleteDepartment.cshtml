@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "DeleteDepartment";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Delete Department</h2>
+
+
+@{
+    bool checkIsActive(string prof)
+    {
+        if (Model != null && Model.IsActive != null)
+        {
+            if (prof.Equals(Model.IsActive)) return true;
+        }
+        return false;
+    }
+}
+
+<form method="post">
+    <table class="table table-hover">
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="text" name="Name" value="@(Model == null ? "":Model.Name)" />
+                <span class="text-danger">@Html.ValidationMessage("Name")</span>
+            </td>
+        </tr>
+        <tr>
+            <td>IsActive:</td>
+            <td>
+                <select class="form-control" name="IsActive">
+                    <option selected disabled>Select</option>
+                    <option selected="@(checkIsActive("true"))" value="true">Yes</option>
+                    <option selected="@(checkIsActive("false"))" value="false">No</option>
+                </select>
+                <span class="text-danger">@Html.ValidationMessage("IsActive")</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" class="btn btn-danger" value="Delete" />
+            </td>
+        </tr>
+    </table>
+
+</form>
+

@@ -17,7 +17,8 @@ namespace BLL.DTOs
         public string BloodGroup { get; set; }
         [Required]
         public string Password { get; set; }
-        public string Image { get; set; }
+        [Required]
+        public string Username { get; set; }
         [Required]
         public string UserType { get; set; }
         [Required]

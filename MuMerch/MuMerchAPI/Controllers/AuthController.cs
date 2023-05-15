@@ -21,7 +21,7 @@ namespace MuMerchAPI.Controllers
         {
             try
             {
-                var data = AuthService.Autheticate(login.Id, login.Password);
+                var data = AuthService.Autheticate(login.Username, login.Password);
                 if (data != null)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, data);

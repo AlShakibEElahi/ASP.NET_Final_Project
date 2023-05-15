@@ -25,7 +25,6 @@ namespace MuMerch.Controllers
         [HttpPost]
         public async Task<ActionResult> AddUser(User user)
         {
-            user.Image = "1";
             if (ModelState.IsValid)
             {
                 try
@@ -59,7 +58,6 @@ namespace MuMerch.Controllers
         [HttpPost]
         public async Task<ActionResult> EditUser(User user)
         {
-            user.Image = "1";
             if (ModelState.IsValid)
             {
                 try

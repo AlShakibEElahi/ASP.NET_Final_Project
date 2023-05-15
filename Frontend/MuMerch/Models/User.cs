@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.ModelBinding;
 
 namespace MuMerch.Models
 {
@@ -13,10 +14,11 @@ namespace MuMerch.Models
         public string Name { get; set; }
         [Required]
         public DateTime DateOfBirth { get; set; }
+        [Required]
         public string BloodGroup { get; set; }
         [Required]
         public string Password { get; set; }
-        public string Image { get; set; }
+        public string Username { get; set; }
         [Required]
         public string UserType { get; set; }
         [Required]

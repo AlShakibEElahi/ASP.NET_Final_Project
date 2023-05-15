@@ -12,16 +12,16 @@ namespace DAL.Repos
 {
     internal class UserRepo : BaseRepo, IBaseRepo<User, int, string, User>, IAuth<bool, string, string>
     {
-        public bool Authenticate(string email, string password)
+        public bool Authenticate(string username, string password)
         {
-            var data = mmContext.Users.SingleOrDefault(u=>u.Email.Equals(email) && u.Password.Equals(password));
+            var data = mmContext.Users.SingleOrDefault(u=>u.Username.Equals(username) && u.Password.Equals(password));
             if(data!=null) return true;
             return false;
         }
 
         public int Delete(User user)
         {
-            var data = mmContext.Users.Find(user.Email);
+            var data = mmContext.Users.Find(user.Username);
             mmContext.Users.Remove(user);
             return mmContext.SaveChanges();
         }
@@ -45,11 +45,10 @@ namespace DAL.Repos
 
         public int Update(User obj)
         {
-            var data = mmContext.Users.Find(obj.Email);
+            var data = mmContext.Users.Find(obj.Username);
             data.Name = obj.Name;
             data.BloodGroup = obj.BloodGroup;
             data.Password = obj.Password;
-            data.Image = obj.Image;
             data.UserType = obj.UserType;
             data.Email = obj.Email;
             data.PhoneNo = obj.PhoneNo;

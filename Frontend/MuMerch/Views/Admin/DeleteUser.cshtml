@@ -4,89 +4,65 @@
     ViewBag.Title = "DeleteUser";
     Layout = "~/Views/Shared/_Admin.cshtml";
 }
-
-<h2>Delete User</h2>
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>User</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.DateOfBirth, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.BloodGroup, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.BloodGroup, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.BloodGroup, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Image, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.UserType, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.UserType, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.UserType, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.PhoneNo, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PhoneNo, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PhoneNo, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Delete" class="btn btn-danger" />
-            </div>
-        </div>
-    </div>
+@{
+    bool checkBloodGroup(string bloodgroup)
+    {
+        if (Model != null && Model.BloodGroup != null)
+        {
+            if (bloodgroup.Equals(Model.BloodGroup)) return true;
+        }
+        return false;
+    }
 }
+@{
+    bool checkType(string type)
+    {
+        if (Model != null && Model.UserType != null)
+        {
+            if (type.Equals(Model.UserType)) return true;
+        }
+        return false;
+    }
+}
+<h2>Add User</h2>
+@if (ViewBag.Message != null)
+{
+    <br />
+    <span class="text-danger">@ViewBag.Message</span>
+    <br />
+}
+<form method="post">
+    Name:<br /><input type="text" name="Name" value="@(Model == null ? "":Model.Name)" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span><br />
+    Date of Birth:<br /><input type="date" name="DateOfBirth" value="@(Model==null?" ":Model.DateOfBirth.Date.ToString("yyyy-MM-dd"))" /><br />
+    <span class="text-danger">@Html.ValidationMessage("DateOfBirth")</span><br />
+    Blood Group:<br /><select class="form-control" name="BloodGroup">
+        <option selected disabled>Select</option>
+        <option selected="@(checkBloodGroup("A+"))" value="A+">A+</option>
+        <option selected="@(checkBloodGroup("A-"))" value="A-">A-</option>
+        <option selected="@(checkBloodGroup("B+"))" value="B+">B+</option>
+        <option selected="@(checkBloodGroup("B-"))" value="B-">B-</option>
+        <option selected="@(checkBloodGroup("AB+"))" value="AB+">AB+</option>
+        <option selected="@(checkBloodGroup("AB-"))" value="AB-">AB-</option>
+        <option selected="@(checkBloodGroup("O+"))" value="O+">O+</option>
+        <option selected="@(checkBloodGroup("O-"))" value="O-">O-</option>
+    </select>
+    <span class="text-danger">@Html.ValidationMessage("BloodGroup")</span><br />
+    Password:<br /><input type="password" name="Password" value="@(Model == null ? "":Model.Password)" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Password")</span><br />
+    Email:<br /><input type="text" name="Email" value="@(Model == null ? "":Model.Email)" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Email")</span><br />
+    PhoneNo:<br /><input type="text" name="PhoneNo" value="@(Model == null ? "":Model.PhoneNo)" /><br />
+    <span class="text-danger">@Html.ValidationMessage("PhoneNo")</span><br />
+    User Type:<br /><select class="form-control" name="UserType">
+        <option selected disabled>Select</option>
+        <option selected="@(checkType("Admin"))" value="Admin">Admin</option>
+        <option selected="@(checkType("Employee"))" value="Employee">Employee</option>
+        <option selected="@(checkType("BandManager"))" value="BandManager">Band Manager</option>
+        <option selected="@(checkType("GigManager"))" value="GigManager">GigManager</option>
+    </select>
+    <span class="text-danger">@Html.ValidationMessage("UserType")</span><br />
+    <input type="submit" class="btn btn-success" value="Add" />
 
-<div>
-    @Html.ActionLink("Back to List", "UserList")
-</div>
+</form>
+

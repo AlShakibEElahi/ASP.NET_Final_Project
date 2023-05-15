@@ -36,13 +36,14 @@ namespace BLL.Services
         }
         public static int Add(DepartmentDTO dto)
         {
-            var cfg = new MapperConfiguration(c => {
-                c.CreateMap<DepartmentDTO, Department>();
-            });
-
-            var mapper = new Mapper(cfg);
-            var mapped = mapper.Map<Department>(dto);
-            return DataAccess.DepartmentContent().Insert(mapped);
+            var data = new Department()
+            {
+                Name = dto.Name,
+                IsActive = dto.IsActive,
+                UpdatedAt = dto.UpdatedAt,
+                UpdatedBy = dto.UpdatedBy,
+            };
+            return DataAccess.DepartmentContent().Insert(data);
         }
         public static int Delete(DepartmentDTO dto)
         {

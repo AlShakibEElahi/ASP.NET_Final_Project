@@ -11,7 +11,7 @@ namespace BLL.DTOs
 {
     public class DepartmentDTO
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         [Required]
         [StringLength(70)]
         public string Name { get; set; }

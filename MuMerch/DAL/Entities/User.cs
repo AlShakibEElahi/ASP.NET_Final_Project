@@ -14,10 +14,11 @@ namespace DAL.Entities
         public string BloodGroup { get; set; }
         [Required]
         public string Password { get; set; }
-        public string Image { get; set; }
+        [Key]
+        [Required]
+        public string Username { get; set; }
         [Required]
         public string UserType { get; set; }
-        [Key]
         [Required]
         [StringLength(70)]
         public string Email { get; set; }
