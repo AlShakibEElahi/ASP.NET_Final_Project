@@ -15,5 +15,6 @@ namespace BLL.DTOs
         public DateTime UpdatedAt { get; set; }
         public DateTime? ExpiredAt { get; set; }
         public string UserId { get; set; }
+        public virtual UserDTO UserDTO { get; set; }
     }
 }

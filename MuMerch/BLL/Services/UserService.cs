@@ -26,7 +26,13 @@ namespace BLL.Services
         public static UserDTO Get(string id)
         {
             var data = DataAccess.UserContent().GetById(id);
-            return Convert(data);
+            var cfg = new MapperConfiguration(c => {
+                c.CreateMap<User, UserDTO>();
+            });
+
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<UserDTO>(data);
+            return mapped;
         }
         public static int Add(UserDTO dto)
         {
@@ -40,59 +46,23 @@ namespace BLL.Services
         }
         public static int Delete(UserDTO dto)
         {
-            var data = Convert(dto);
-            return DataAccess.UserContent().Delete(data);
+            var cfg = new MapperConfiguration(c => {
+                c.CreateMap<UserDTO, User>();
+            });
+
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<User>(dto);
+            return DataAccess.UserContent().Delete(mapped);
         }
         public static int Edit(UserDTO dto)
         {
-            var data = Convert(dto);
-            return DataAccess.UserContent().Update(data);
-        }
-        static List<UserDTO> Convert(List<User> user)
-        {
-            var data = new List<UserDTO>();
-            foreach (User usr in user)
-            {
-                data.Add(Convert(usr));
-            }
-            return data;
-        }
+            var cfg = new MapperConfiguration(c => {
+                c.CreateMap<UserDTO, User>();
+            });
 
-        static UserDTO Convert(User user)
-        {
-            return new UserDTO()
-            {
-                Name = user.Name,
-                BloodGroup = user.BloodGroup,
-                Password = user.Password,
-                Image = user.Image,
-                UserType = user.UserType,
-                Email = user.Email,
-                PhoneNo = user.PhoneNo
-            };
-        }
-        static List<User> Convert(List<UserDTO> user)
-        {
-            var data = new List<User>();
-            foreach (UserDTO usr in user)
-            {
-                data.Add(Convert(usr));
-            }
-            return data;
-        }
-
-        static User Convert(UserDTO user)
-        {
-            return new User()
-            {
-                Name = user.Name,
-                BloodGroup = user.BloodGroup,
-                Password = user.Password,
-                Image = user.Image,
-                UserType = user.UserType,
-                Email = user.Email,
-                PhoneNo = user.PhoneNo
-            };
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<User>(dto);
+            return DataAccess.UserContent().Update(mapped);
         }
     }
 }

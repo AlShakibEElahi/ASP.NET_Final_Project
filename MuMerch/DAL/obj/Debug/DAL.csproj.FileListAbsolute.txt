@@ -86,9 +86,7 @@ D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.Core
 D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.dll
 D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.pdb
-D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.Migrations.Dbinit.resources
-D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
-D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.Migrations.DbChanges.resources
-D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.Migrations.fb.resources
 D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.Migrations.initdb.resources
 D:\github\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.Migrations.dbinit.resources
+D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\DAL\obj\Debug\DAL.csproj.GenerateResource.cache

@@ -57,9 +57,11 @@ namespace MuMerch.Controllers
             var data = MuMerchClientGet.Get<List<Product>>("product/all");
             return View(data);
         }
-        public ActionResult DeleteProduct()
+        [HttpGet]
+        public ActionResult DeleteProduct(int id)
         {
-            return View();
+            var data = MuMerchClientGet.Get<Product>("product/{id}");
+            return View(data);
         }
         [HttpPost]
         public async Task<ActionResult> DeleteProduct(Product product)

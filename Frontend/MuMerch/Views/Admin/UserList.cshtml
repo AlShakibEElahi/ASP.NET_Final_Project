@@ -8,7 +8,7 @@
 <h2>UserList</h2>
 
 <p>
-    @Html.ActionLink("Add New User", "AddUser")
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
@@ -66,8 +66,8 @@
             @Html.DisplayFor(modelItem => item.PhoneNo)
         </td>
         <td>
-            @Html.ActionLink("Edit", "EditUser", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "DeleteUser", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "EditUser", new { id=item.Email }) |
+            @Html.ActionLink("Delete", "DeleteUser", new { id = item.Email })
         </td>
     </tr>
 }

@@ -161,6 +161,7 @@
     <Compile Include="Clients\MuMerchClientPost.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\BandController.cs" />
     <Compile Include="Controllers\BandManagerController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\GigManagerController.cs" />
@@ -249,10 +250,12 @@
     <Content Include="Views\Employee\DeleteProduct.cshtml" />
     <Content Include="Views\Employee\SizeList.cshtml" />
     <Content Include="Views\Employee\ColorList.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\BandManager\" />
+    <Folder Include="Views\Band\" />
     <Folder Include="Views\GigManager\" />
   </ItemGroup>
   <ItemGroup>

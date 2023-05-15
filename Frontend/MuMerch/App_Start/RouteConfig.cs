@@ -16,7 +16,7 @@ namespace MuMerch
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Admin", action = "Addcolor", id = UrlParameter.Optional }
+                defaults: new { controller = "Auth", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

@@ -33,8 +33,16 @@ namespace MuMerch.Controllers
                 var token = await MuMerchClientPost.Post<Token>("login", login);
                 if (token != null)
                 {
-
-                    return RedirectToAction("Index", "Home");
+                    Session["TokenKey"] = token.TokenKey;
+                    var id = token.UserId;
+                    Session["Id"] = id;
+                    var user = await MuMerchClientGet.Get<User>($"user/{id}");
+                    Session["UserType"] = user.UserType;
+                    if (Session["UserType"].Equals("Admin")) return RedirectToAction("Index", "Admin");
+                    if (Session["UserType"].Equals("Employee")) return RedirectToAction("Index", "Employee");
+                    if (Session["UserType"].Equals("BandManager")) return RedirectToAction("Index", "BandManager");
+                    if (Session["UserType"].Equals("GigManager")) return RedirectToAction("Index", "GigManager");
+                    return View();
                 }
                 else
                 {

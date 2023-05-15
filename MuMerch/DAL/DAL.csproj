@@ -77,9 +77,9 @@
     <Compile Include="Entities\User.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IBaseRepo.cs" />
-    <Compile Include="Migrations\202305151043395_initdb.cs" />
-    <Compile Include="Migrations\202305151043395_initdb.designer.cs">
-      <DependentUpon>202305151043395_initdb.cs</DependentUpon>
+    <Compile Include="Migrations\202305151326005_dbinit.cs" />
+    <Compile Include="Migrations\202305151326005_dbinit.designer.cs">
+      <DependentUpon>202305151326005_dbinit.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MMContext.cs" />
@@ -113,8 +113,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202305151043395_initdb.resx">
-      <DependentUpon>202305151043395_initdb.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202305151326005_dbinit.resx">
+      <DependentUpon>202305151326005_dbinit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

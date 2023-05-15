@@ -15,7 +15,7 @@ namespace MuMerch.Models
         [Required]
         public bool IsActive { get; set; }
         [Required]
-        public int UpdatedBy { get; set; }
+        public string UpdatedBy { get; set; }
         [Required]
         public DateTime UpdatedAt { get; set; }
     }
