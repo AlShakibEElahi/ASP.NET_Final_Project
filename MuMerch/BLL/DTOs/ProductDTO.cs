@@ -21,8 +21,6 @@ namespace BLL.DTOs
         [Required]
         public int Quantity { get; set; }
         [Required]
-        public decimal BuyingPrice { get; set; }
-        [Required]
         public decimal SellingPrice { get; set; }
         [Required]
         public decimal RevenuePercentage { get; set; }

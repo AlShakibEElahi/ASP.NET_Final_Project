@@ -12,6 +12,10 @@ namespace MuMerch.Models
         public int Id { get; set; }
         [Required]
         public DateTime Date { get; set; }
+        [Required]
+        public int Price { get; set; }
+        [Required]
+        public int OrderedQuantity { get; set; }
         [ForeignKey("Customer")]
         public int CustomerId { get; set; }
         [ForeignKey("User")]

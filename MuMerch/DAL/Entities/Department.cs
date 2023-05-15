@@ -7,7 +7,6 @@ namespace DAL.Entities
     public class Department
     {
         [Key]
-        [Required]
         public int Id { get; set; }
         [Required]
         [StringLength(70)]

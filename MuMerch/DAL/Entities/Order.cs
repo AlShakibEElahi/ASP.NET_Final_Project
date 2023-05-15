@@ -10,6 +10,10 @@ namespace DAL.Entities
         [Required]
         public int Id { get; set; }
         [Required]
+        public int Price { get; set; }
+        [Required]
+        public int OrderedQuantity { get; set; }
+        [Required]
         public DateTime Date { get; set; }
         [ForeignKey("Customer")]
         public int CustomerId { get; set; }

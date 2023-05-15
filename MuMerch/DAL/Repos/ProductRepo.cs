@@ -33,7 +33,6 @@ namespace DAL.Repos
             data.UpdatedAt = obj.UpdatedAt;
             data.UpdatedBy = obj.UpdatedBy;
             data.Image = obj.Image;
-            data.BuyingPrice = obj.BuyingPrice;
             data.SellingPrice = obj.SellingPrice;
             data.RevenuePercentage = obj.RevenuePercentage;
             data.ProUnitId = obj.ProUnitId;
