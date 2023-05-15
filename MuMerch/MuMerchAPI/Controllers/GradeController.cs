@@ -10,6 +10,7 @@ using System.Web.Http.Cors;
 namespace MuMerchAPI.Controllers
 {
     [EnableCors("*","*","*")]
+
     public class GradeController : ApiController
     {
         [HttpGet]

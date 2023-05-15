@@ -8,9 +8,7 @@ namespace DAL.Entities
     {
         [Key]
         [Required]
-        [StringLength(7)]
-        [Index("UniqueEmployeeId", 1, IsUnique = true)]
-        public string EmployeeId { get; set; }
+        public int EmployeeId { get; set; }
         [Required]
         public DateTime DateOfJoining { get; set; }
         [ForeignKey("Grade")]

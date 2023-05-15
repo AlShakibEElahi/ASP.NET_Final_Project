@@ -10,8 +10,7 @@ namespace BLL.DTOs
     public class GigManagerDTO
     {
         [Required]
-        [StringLength(7)]
-        public string GigManagerId { get; set; }
+        public int GigManagerId { get; set; }
         [Required]
         public int GigId { get; set; }
         [Required]

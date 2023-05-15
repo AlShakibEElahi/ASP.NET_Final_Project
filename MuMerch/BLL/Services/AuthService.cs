@@ -46,12 +46,52 @@ namespace BLL.Services
             return false;
         }
 
-        public static bool Logout(string TokenKey)
+        public static bool Logout(string tokenKey)
         {
-            var exToken = DataAccess.TokenContent().GetById(TokenKey);
+            var exToken = DataAccess.TokenContent().GetById(tokenKey);
             exToken.ExpiredAt = DateTime.Now;
             var data = DataAccess.TokenContent().Update(exToken);
             if(data!=null )
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static bool IsAdmin(string tokenKey)
+        {
+            var extk = DataAccess.TokenContent().GetById(tokenKey);
+            if (IsTokenValid(tokenKey) && extk.User.UserType.Equals("Admin"))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static bool IsEmployee(string tokenKey)
+        {
+            var extk = DataAccess.TokenContent().GetById(tokenKey);
+            if (IsTokenValid(tokenKey) && extk.User.UserType.Equals("Employee"))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static bool IsBandManager(string tokenKey)
+        {
+            var extk = DataAccess.TokenContent().GetById(tokenKey);
+            if (IsTokenValid(tokenKey) && extk.User.UserType.Equals("BandManager"))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static bool IsGigManager(string tokenKey)
+        {
+            var extk = DataAccess.TokenContent().GetById(tokenKey);
+            if (IsTokenValid(tokenKey) && extk.User.UserType.Equals("GigManager"))
             {
                 return true;
             }

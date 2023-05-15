@@ -8,9 +8,7 @@ namespace DAL.Entities
     {
         [Key]
         [Required]
-        [StringLength(7)]
-        [Index("UniqueBandManagerId", 1, IsUnique = true)]
-        public string BandManagerId { get; set; }
+        public int BandManagerId { get; set; }
         [Required]
         [ForeignKey("Band")]
         public int BandId { get; set; }

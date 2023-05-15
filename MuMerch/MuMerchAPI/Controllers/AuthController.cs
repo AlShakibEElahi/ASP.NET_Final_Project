@@ -7,10 +7,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Services.Description;
 
 namespace MuMerchAPI.Controllers
 {
+    [EnableCors("*","*","*")]
     public class AuthController : ApiController
     {
         [HttpPost]

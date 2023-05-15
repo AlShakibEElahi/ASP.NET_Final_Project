@@ -22,6 +22,8 @@ namespace DAL.Entities
         public DateTime UpdatedAt { get; set; }
         public string Image { get; set; }
         [Required]
+        public int Quantity { get; set; }
+        [Required]
         public decimal BuyingPrice { get; set; }
         [Required]
         public decimal SellingPrice { get;set; }

@@ -12,9 +12,7 @@ namespace DAL.Entities
     {
         [Key]
         [Required]
-        [StringLength(7)]
-        [Index("UniqueGigManagerId", 1, IsUnique = true)]
-        public string GigManagerId { get; set; }
+        public int GigManagerId { get; set; }
         [ForeignKey("Gig")]
 
         public int GigId { get; set; }

@@ -159,11 +159,38 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Clients\MuMerchClientGet.cs" />
     <Compile Include="Clients\MuMerchClientPost.cs" />
-    <Compile Include="Controllers\GradeController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\BandManagerController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\GigManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Band.cs" />
+    <Compile Include="Models\BandManager.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Color.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\Designation.cs" />
+    <Compile Include="Models\Division.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Gig.cs" />
+    <Compile Include="Models\GigManager.cs" />
     <Compile Include="Models\Grade.cs" />
+    <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductColorMap.cs" />
+    <Compile Include="Models\ProductOrderMap.cs" />
+    <Compile Include="Models\ProductSizeMap.cs" />
+    <Compile Include="Models\ProductUnit.cs" />
+    <Compile Include="Models\Size.cs" />
+    <Compile Include="Models\Token.cs" />
+    <Compile Include="Models\Unit.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Constants\AppSetting.cs" />
   </ItemGroup>
@@ -200,12 +227,18 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Grade\List.cshtml" />
-    <Content Include="Views\Grade\Add.cshtml" />
-    <Content Include="Views\Grade\Index.cshtml" />
+    <Content Include="Views\Shared\_Admin.cshtml" />
+    <Content Include="Views\Shared\_Employee.cshtml" />
+    <Content Include="Views\Shared\_BandManager.cshtml" />
+    <Content Include="Views\Shared\_GigManager.cshtml" />
+    <Content Include="Views\Auth\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Admin\" />
+    <Folder Include="Views\BandManager\" />
+    <Folder Include="Views\Employee\" />
+    <Folder Include="Views\GigManager\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

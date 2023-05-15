@@ -12,8 +12,7 @@ namespace BLL.DTOs
     public class BandManagerDTO
     {
         [Required]
-        [StringLength(7)]
-        public string BandManagerId { get; set; }
+        public int BandManagerId { get; set; }
         [Required]
         public int BandId { get; set; }
         [Required]

@@ -11,7 +11,7 @@ namespace BLL.DTOs
 {
     public class EmployeeDTO
     {
-        public string EmployeeId { get; set; }
+        public int EmployeeId { get; set; }
         [Required]
         public DateTime DateOfJoining { get; set; }
         public int GradeId { get; set; }

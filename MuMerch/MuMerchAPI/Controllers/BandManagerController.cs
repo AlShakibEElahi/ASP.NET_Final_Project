@@ -10,9 +10,9 @@ using System.Web.Http.Cors;
 
 namespace MuMerchAPI.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class BandManagerController : ApiController
     {
-        [EnableCors("*", "*", "*")]
         [HttpGet]
         [Route("api/bandManager/all")]
         public HttpResponseMessage AllBandManagers()

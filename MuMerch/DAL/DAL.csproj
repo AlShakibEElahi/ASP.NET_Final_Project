@@ -77,9 +77,13 @@
     <Compile Include="Entities\User.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IBaseRepo.cs" />
-    <Compile Include="Migrations\202305121448070_a.cs" />
-    <Compile Include="Migrations\202305121448070_a.designer.cs">
-      <DependentUpon>202305121448070_a.cs</DependentUpon>
+    <Compile Include="Migrations\202305141739017_Dbinit.cs" />
+    <Compile Include="Migrations\202305141739017_Dbinit.designer.cs">
+      <DependentUpon>202305141739017_Dbinit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305150535534_DbChanges.cs" />
+    <Compile Include="Migrations\202305150535534_DbChanges.designer.cs">
+      <DependentUpon>202305150535534_DbChanges.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MMContext.cs" />
@@ -113,8 +117,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202305121448070_a.resx">
-      <DependentUpon>202305121448070_a.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202305141739017_Dbinit.resx">
+      <DependentUpon>202305141739017_Dbinit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305150535534_DbChanges.resx">
+      <DependentUpon>202305150535534_DbChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

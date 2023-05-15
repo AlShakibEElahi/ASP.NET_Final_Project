@@ -68,3 +68,17 @@ F:\.net\Project\ASP.NET_Final_Project\MuMerch\BLL\obj\Debug\BLL.csproj.CoreCompi
 F:\.net\Project\ASP.NET_Final_Project\MuMerch\BLL\obj\Debug\BLL.csproj.CopyComplete
 F:\.net\Project\ASP.NET_Final_Project\MuMerch\BLL\obj\Debug\BLL.dll
 F:\.net\Project\ASP.NET_Final_Project\MuMerch\BLL\obj\Debug\BLL.pdb
+D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\BLL\bin\Debug\BLL.dll
+D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\BLL\bin\Debug\BLL.pdb
+D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\BLL\bin\Debug\AutoMapper.dll
+D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\BLL\bin\Debug\DAL.dll
+D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\BLL\bin\Debug\EntityFramework.dll
+D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\BLL\bin\Debug\DAL.pdb
+D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\BLL\bin\Debug\DAL.dll.config
+D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\BLL\bin\Debug\AutoMapper.xml
+D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\BLL\bin\Debug\EntityFramework.xml
+D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\BLL\obj\Debug\BLL.dll
+D:\Codes\New MuMerch\ASP.NET_Final_Project\MuMerch\BLL\obj\Debug\BLL.pdb

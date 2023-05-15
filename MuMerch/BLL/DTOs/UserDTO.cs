@@ -20,7 +20,7 @@ namespace BLL.DTOs
         public string Password { get; set; }
         public string Image { get; set; }
         [Required]
-        public int UserType { get; set; }
+        public string UserType { get; set; }
         [StringLength(70)]
         public string Email { get; set; }
         [Required]

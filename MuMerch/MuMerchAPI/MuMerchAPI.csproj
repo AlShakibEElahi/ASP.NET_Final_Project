@@ -98,6 +98,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Auth\AdminAccess.cs" />
+    <Compile Include="Auth\BandManagerAccess.cs" />
+    <Compile Include="Auth\EmployeeAccess.cs" />
+    <Compile Include="Auth\GigManagerAccess.cs" />
     <Compile Include="Auth\Logged.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\BandController.cs" />
