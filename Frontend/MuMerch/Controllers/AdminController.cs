@@ -62,7 +62,7 @@ namespace MuMerch.Controllers
             {
                 try
                 {
-                    var token = await MuMerchClientPost.Post<int>("user/add", user);
+                    var token = await MuMerchClientPost.Post<int>("user/edit", user);
                     if (token > 0)
                     {
 
@@ -166,7 +166,7 @@ namespace MuMerch.Controllers
             {
                 try
                 {
-                    var token = await MuMerchClientPost.Post<int>("category/add", category);
+                    var token = await MuMerchClientPost.Post<int>("category/edit", category);
                     if (token > 0)
                     {
 
@@ -270,7 +270,7 @@ namespace MuMerch.Controllers
             {
                 try
                 {
-                    var token = await MuMerchClientPost.Post<int>("size/add", size);
+                    var token = await MuMerchClientPost.Post<int>("size/edit", size);
                     if (token > 0)
                     {
 
@@ -374,7 +374,7 @@ namespace MuMerch.Controllers
             {
                 try
                 {
-                    var token = await MuMerchClientPost.Post<int>("color/add", color);
+                    var token = await MuMerchClientPost.Post<int>("color/edit", color);
                     if (token > 0)
                     {
 
@@ -478,7 +478,7 @@ namespace MuMerch.Controllers
             {
                 try
                 {
-                    var token = await MuMerchClientPost.Post<int>("unit/add", unit);
+                    var token = await MuMerchClientPost.Post<int>("unit/edit", unit);
                     if (token > 0)
                     {
 
@@ -534,8 +534,16 @@ namespace MuMerch.Controllers
             return View(data);
         }
         [HttpGet]
-        public ActionResult AddProduct()
+        public async Task<ActionResult> AddProduct()
         {
+            var band = await MuMerchClientGet.Get<List<Band>>("band/all");
+            ViewBag.Band = band;
+            var category = await MuMerchClientGet.Get<List<Category>>("category/all");
+            ViewBag.Category = category;
+            var productunit = await MuMerchClientGet.Get<List<ProductUnit>>("productunit/all");
+            ViewBag.ProductUnit = productunit;
+            var gig = await MuMerchClientGet.Get<List<Gig>>("gig/all");
+            ViewBag.Gig = gig;
             return View();
         }
         [HttpPost]
@@ -582,7 +590,7 @@ namespace MuMerch.Controllers
             {
                 try
                 {
-                    var token = await MuMerchClientPost.Post<int>("product/add", product);
+                    var token = await MuMerchClientPost.Post<int>("product/edit", product);
                     if (token > 0)
                     {
 
@@ -686,7 +694,7 @@ namespace MuMerch.Controllers
             {
                 try
                 {
-                    var token = await MuMerchClientPost.Post<int>("band/add", band);
+                    var token = await MuMerchClientPost.Post<int>("band/edit", band);
                     if (token > 0)
                     {
 
@@ -742,8 +750,15 @@ namespace MuMerch.Controllers
             return View(data);
         }
         [HttpGet]
-        public ActionResult AddBandManager()
+        public async Task<ActionResult> AddBandManager()
         {
+            var bandmanager = await MuMerchClientGet.Get<List<BandManager>>("bandmanager/all");
+            ViewBag.BandManager = bandmanager;
+            var band = await MuMerchClientGet.Get<List<Band>>("band/all");
+            ViewBag.Band = band;
+            var user = await MuMerchClientGet.Get<List<User>>("user/all");
+            ViewBag.User = user;
+
             return View();
         }
         [HttpPost]
@@ -786,7 +801,7 @@ namespace MuMerch.Controllers
             {
                 try
                 {
-                    var token = await MuMerchClientPost.Post<int>("bandmanager/add", bandmanager);
+                    var token = await MuMerchClientPost.Post<int>("bandmanager/edit", bandmanager);
                     if (token > 0)
                     {
 
@@ -890,7 +905,7 @@ namespace MuMerch.Controllers
             {
                 try
                 {
-                    var token = await MuMerchClientPost.Post<int>("gig/add", gig);
+                    var token = await MuMerchClientPost.Post<int>("gig/edit", gig);
                     if (token > 0)
                     {
 
@@ -946,8 +961,14 @@ namespace MuMerch.Controllers
             return View(data);
         }
         [HttpGet]
-        public ActionResult AddGigManager()
+        public async Task<ActionResult> AddGigManager()
         {
+            var gigmanager = await MuMerchClientGet.Get<List<GigManager>>("gigmanager/all");
+            ViewBag.GigManager = gigmanager;
+            var gig = await MuMerchClientGet.Get<List<Gig>>("gig/all");
+            ViewBag.Gig = gig;
+            var user = await MuMerchClientGet.Get<List<User>>("user/all");
+            ViewBag.User = user;
             return View();
         }
         [HttpPost]
@@ -990,7 +1011,7 @@ namespace MuMerch.Controllers
             {
                 try
                 {
-                    var token = await MuMerchClientPost.Post<int>("gigmanager/add", gigmanager);
+                    var token = await MuMerchClientPost.Post<int>("gigmanager/edit", gigmanager);
                     if (token > 0)
                     {
 
@@ -1045,10 +1066,202 @@ namespace MuMerch.Controllers
             var data = await MuMerchClientGet.Get<List<GigManager>>("gigmanager/all");
             return View(data);
         }
+        [HttpGet]
+        public ActionResult AddCustomer()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<ActionResult> AddCustomer(  Customer customer)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var token = await MuMerchClientPost.Post<int>("customer/add", customer);
+                    if (token > 0)
+                    {
+
+                        return RedirectToAction("CustomerList");
+                    }
+                    else
+                    {
+                        ViewBag.Message = "Invalid login credentials";
+                        return View();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.Message = "Error logging in: " + ex.Message;
+                    return View();
+                }
+            }
+            return View(customer);
+        }
+        [HttpGet]
+        public async Task<ActionResult> EditCustomer(string id)
+        {
+            var data = await MuMerchClientGet.Get< Customer>($"customer/{id}");
+            return View(data);
+        }
+        [HttpPost]
+        public async Task<ActionResult> EditCustomer(  Customer customer)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var token = await MuMerchClientPost.Post<int>("customer/edit", customer);
+                    if (token > 0)
+                    {
+
+                        return RedirectToAction("CustomerList");
+                    }
+                    else
+                    {
+                        ViewBag.Message = "Invalid login credentials";
+                        return View();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.Message = "Error logging in: " + ex.Message;
+                    return View();
+                }
+            }
+            return View(customer);
+        }
+        [HttpGet]
+        public async Task<ActionResult> DeleteCustomer(string id)
+        {
+            var data = await MuMerchClientGet.Get< Customer>($"customer/{id}");
+            return View(data);
+        }
+        [HttpPost]
+        public async Task<ActionResult> DeleteCustomer( Customer customer)
+        {
+            try
+            {
+                var token = await MuMerchClientPost.Post<int>("customer/delete", customer);
+                if (token > 0)
+                {
+
+                    return RedirectToAction("CustomerList");
+                }
+                else
+                {
+                    ViewBag.Message = "Invalid login credentials";
+                    return View();
+                }
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Message = "Error logging in: " + ex.Message;
+                return View();
+            }
+        }
+
         public async Task<ActionResult> CustomerList()
         {
             var data = await MuMerchClientGet.Get<List<Customer>>("customer/all");
             return View(data);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> AddOrder()
+        {
+            var customer = await MuMerchClientGet.Get<List<Customer>>("customer/all");
+            ViewBag.Customer = customer;
+            return View();
+        }
+        [HttpPost]
+        public async Task<ActionResult> AddOrder(Order order)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var token = await MuMerchClientPost.Post<int>("order/add", order);
+                    if (token > 0)
+                    {
+
+                        return RedirectToAction("OrderList");
+                    }
+                    else
+                    {
+                        ViewBag.Message = "Invalid login credentials";
+                        return View();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.Message = "Error logging in: " + ex.Message;
+                    return View();
+                }
+            }
+            return View(order);
+        }
+        [HttpGet]
+        public async Task<ActionResult> EditOrder(int id)
+        {
+            var data = await MuMerchClientGet.Get<Order>($"order/{id}");
+            return View(data);
+        }
+        [HttpPost]
+        public async Task<ActionResult> EditOrder(Order order)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var token = await MuMerchClientPost.Post<int>("order/edit", order);
+                    if (token > 0)
+                    {
+
+                        return RedirectToAction("OrderList");
+                    }
+                    else
+                    {
+                        ViewBag.Message = "Invalid login credentials";
+                        return View();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.Message = "Error logging in: " + ex.Message;
+                    return View();
+                }
+            }
+            return View(order);
+        }
+        [HttpGet]
+        public async Task<ActionResult> DeleteOrder(int id)
+        {
+            var data = await MuMerchClientGet.Get<Order>($"order/{id}");
+            return View(data);
+        }
+        [HttpPost]
+        public async Task<ActionResult> DeleteOrder(Order order)
+        {
+            try
+            {
+                var token = await MuMerchClientPost.Post<int>("order/delete", order);
+                if (token > 0)
+                {
+
+                    return RedirectToAction("OrderList");
+                }
+                else
+                {
+                    ViewBag.Message = "Invalid login credentials";
+                    return View();
+                }
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Message = "Error logging in: " + ex.Message;
+                return View();
+            }
         }
         public async Task<ActionResult> OrderList()
         {
@@ -1103,7 +1316,7 @@ namespace MuMerch.Controllers
             {
                 try
                 {
-                    var token = await MuMerchClientPost.Post<int>("grade/add", grade);
+                    var token = await MuMerchClientPost.Post<int>("grade/edit", grade);
                     if (token > 0)
                     {
 
@@ -1206,7 +1419,7 @@ namespace MuMerch.Controllers
             {
                 try
                 {
-                    var token = await MuMerchClientPost.Post<int>("designation/add", designation);
+                    var token = await MuMerchClientPost.Post<int>("designation/edit", designation);
                     if (token > 0)
                     {
 
@@ -1309,7 +1522,7 @@ namespace MuMerch.Controllers
             {
                 try
                 {
-                    var token = await MuMerchClientPost.Post<int>("department/add", department);
+                    var token = await MuMerchClientPost.Post<int>("department/edit", department);
                     if (token > 0)
                     {
 
@@ -1412,7 +1625,7 @@ namespace MuMerch.Controllers
             {
                 try
                 {
-                    var token = await MuMerchClientPost.Post<int>("division/add", division);
+                    var token = await MuMerchClientPost.Post<int>("division/edit", division);
                     if (token > 0)
                     {
 
@@ -1515,7 +1728,7 @@ namespace MuMerch.Controllers
             {
                 try
                 {
-                    var token = await MuMerchClientPost.Post<int>("location/add", location);
+                    var token = await MuMerchClientPost.Post<int>("location/edit", location);
                     if (token > 0)
                     {
 

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<MuMerch.Models.Unit>
+
+@{
+    ViewBag.Title = "UnitList";
+    Layout = "~/Views/Shared/_Employee.cshtml";
+}
+
+<h2>UnitList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddUnit")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedAt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedBy)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedAt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedBy)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditUnit", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "DeleteUnit", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

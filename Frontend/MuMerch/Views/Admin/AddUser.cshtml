@@ -32,7 +32,9 @@
 }
 <form method="post">
     Name:<br /><input type="text" name="Name" value="@(Model == null ? "":Model.Name)" /><br />
-    <span class="text-danger">@Html.ValidationMessage("Name")</span><br/>
+    <span class="text-danger">@Html.ValidationMessage("Name")</span><br />
+    Username:<br /><input type="text" name="Username" value="@(Model == null ? "":Model.Username)" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Username")</span><br />
     Date of Birth:<br /><input type="date" name="DateOfBirth" value="@(Model==null?" ":Model.DateOfBirth.Date.ToString("yyyy-MM-dd"))" /><br />
     <span class="text-danger">@Html.ValidationMessage("DateOfBirth")</span><br />
     Blood Group:<br /><select class="form-control" name="BloodGroup">

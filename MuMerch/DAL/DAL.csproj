@@ -77,9 +77,13 @@
     <Compile Include="Entities\User.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IBaseRepo.cs" />
-    <Compile Include="Migrations\202305152018550_fb.cs" />
-    <Compile Include="Migrations\202305152018550_fb.designer.cs">
-      <DependentUpon>202305152018550_fb.cs</DependentUpon>
+    <Compile Include="Migrations\202305152138011_initdb.cs" />
+    <Compile Include="Migrations\202305152138011_initdb.designer.cs">
+      <DependentUpon>202305152138011_initdb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305152202514_initdb1.cs" />
+    <Compile Include="Migrations\202305152202514_initdb1.designer.cs">
+      <DependentUpon>202305152202514_initdb1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MMContext.cs" />
@@ -113,8 +117,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202305152018550_fb.resx">
-      <DependentUpon>202305152018550_fb.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202305152138011_initdb.resx">
+      <DependentUpon>202305152138011_initdb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305152202514_initdb1.resx">
+      <DependentUpon>202305152202514_initdb1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

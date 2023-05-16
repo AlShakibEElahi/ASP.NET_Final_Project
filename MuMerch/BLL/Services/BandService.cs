@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 
 namespace BLL.Services
 {
@@ -14,71 +15,54 @@ namespace BLL.Services
         public static List<BandDTO> GetAll()
         {
             var data = DataAccess.BandContent().GetAll();
-            return Convert(data);
+            var cfg = new MapperConfiguration(c => {
+                c.CreateMap<Band, BandDTO>();
+            });
+
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<List<BandDTO>>(data);
+            return mapped;
         }
         public static BandDTO Get(int id)
         {
             var data = DataAccess.BandContent().GetById(id);
-            return Convert(data);
+            var cfg = new MapperConfiguration(c => {
+                c.CreateMap<Band, BandDTO>();
+            });
+
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<BandDTO>(data);
+            return mapped;
         }
         public static int Add(BandDTO dto)
         {
-            var data = Convert(dto);
-            return DataAccess.BandContent().Insert(data);
+            var cfg = new MapperConfiguration(c => {
+                c.CreateMap<BandDTO, Band>();
+            });
+
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<Band>(dto);
+            return DataAccess.BandContent().Insert(mapped);
         }
         public static int Delete(BandDTO dto)
         {
-            var data = Convert(dto);
-            return DataAccess.BandContent().Delete(data);
+            var cfg = new MapperConfiguration(c => {
+                c.CreateMap<BandDTO, Band>();
+            });
+
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<Band>(dto);
+            return DataAccess.BandContent().Delete(mapped);
         }
         public static int Edit(BandDTO dto)
         {
-            var data = Convert(dto);
-            return DataAccess.BandContent().Update(data);
-        }
-        static List<Band> Convert(List<BandDTO> nwz)
-        {
-            var data = new List<Band>();
-            foreach (BandDTO ns in nwz)
-            {
-                data.Add(Convert(ns));
-            }
-            return data;
-        }
+            var cfg = new MapperConfiguration(c => {
+                c.CreateMap<BandDTO, Band>();
+            });
 
-        static Band Convert(BandDTO band)
-        {
-            return new Band()
-            {
-                Name = band.Name,
-                Image= band.Image,
-                OnboardDate= band.OnboardDate,
-                IsActive = band.IsActive,
-                UpdatedAt = band.UpdatedAt,
-                UpdatedBy = band.UpdatedBy
-            };
-        }
-        static List<BandDTO> Convert(List<Band> nwz)
-        {
-            var data = new List<BandDTO>();
-            foreach (Band ns in nwz)
-            {
-                data.Add(Convert(ns));
-            }
-            return data;
-        }
-
-        static BandDTO Convert(Band band)
-        {
-            return new BandDTO()
-            {
-                Name = band.Name,
-                Image = band.Image,
-                OnboardDate = band.OnboardDate,
-                IsActive = band.IsActive,
-                UpdatedAt = band.UpdatedAt,
-                UpdatedBy = band.UpdatedBy
-            };
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<Band>(dto);
+            return DataAccess.BandContent().Update(mapped);
         }
     }
 }

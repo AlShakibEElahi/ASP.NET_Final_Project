@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "DeleteOrder";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>DeleteOrder</h2>
+
+
+@{
+    bool checkCustomerId(string customerId)
+    {
+        if (Model != null && Model.CustomerId != null)
+        {
+            if (customerId.Equals(Model.CustomerId)) return true;
+        }
+        return false;
+    }
+}<form method="post">
+    <table class="table table-hover">
+        <tr>
+            <td>Date:</td>
+            <td>
+                <input type="date" name="Date" value="@(Model==null?" ":Model.Date.Date.ToString("yyyy-MM-dd"))" />
+            </td>
+        </tr>
+        <tr>
+            <td>Price:</td>
+            <td>
+                <input type=" " name="Price" value="@(Model==null?" ":Model.Price.Date.ToString("yyyy-MM-dd"))" />
+            </td>
+        </tr>
+        <tr>
+            <td>Ordered Quantity:</td>
+            <td>
+                <input type="number" name="OrderedQuantity" value="@(Model==null?" ":Model.OrderedQuantity.Date.ToString("yyyy-MM-dd"))" />
+            </td>
+        </tr>
+        <tr>
+            <td>Customer Id:</td>
+            <td>
+                <select class="form-control" name="CustomerId">
+                    <option selected disabled>Select</option>
+                    @foreach (var item in @ViewBag.Customer)
+                    {
+                        <option selected="@(checkCustomerId("@item.Id"))" value="{@item.Id}">@item.Name</option>
+                    }
+                </select>
+                <span class="text-danger">@Html.ValidationMessage("Customer Id")</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" class="btn btn-success" value="Delete" />
+            </td>
+        </tr>
+    </table>
+
+</form>

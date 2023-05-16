@@ -11,7 +11,6 @@ namespace DAL.Entities
     public class Designation
     {
         [Key]
-        [Required]
         public int Id { get; set; }
         [Required]
         [StringLength(70)]

@@ -1,0 +1,132 @@
+﻿
+@{
+    ViewBag.Title = "DeleteProduct";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>DeleteProduct</h2>
+
+@{
+    bool checkProUnitId(string proUnitId)
+    {
+        if (Model != null && Model.ProUnitId != null)
+        {
+            if (proUnitId.Equals(Model.ProUnitId)) return true;
+        }
+        return false;
+    }
+}
+@{
+    bool checkCategoryId(string categoryId)
+    {
+        if (Model != null && Model.CategoryId != null)
+        {
+            if (categoryId.Equals(Model.CategoryId)) return true;
+        }
+        return false;
+    }
+}
+@{
+    bool checkBandId(string bandId)
+    {
+        if (Model != null && Model.BandId != null)
+        {
+            if (bandId.Equals(Model.BandId)) return true;
+        }
+        return false;
+    }
+}
+@{
+    bool checkGigId(string gigId)
+    {
+        if (Model != null && Model.GigId != null)
+        {
+            if (gigId.Equals(Model.GigId)) return true;
+        }
+        return false;
+    }
+}
+<form method="post">
+    <table class="table table-hover">
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="text" name="Name" value="@(Model == null ? "":Model.Name)" />
+                <span class="text-danger">@Html.ValidationMessage("Name")</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Selling Price:</td>
+            <td>
+                <input type="text" name="SellingPrice" value="@(Model == null ? "":Model.SellingPrice)" />
+                <span class="text-danger">@Html.ValidationMessage("SellingPrice")</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Revenue Percentage:</td>
+            <td>
+                <input type="number" name="RevenuePercentage" value="@(Model == null ? "":Model.RevenuePercentage)" />
+                <span class="text-danger">@Html.ValidationMessage("Revenue Percentage")</span>
+            </td>
+        </tr>
+        <tr>
+            <td>ProUnit Id:</td>
+            <td>
+                <select class="form-control" name="ProUnitId">
+                    <option selected disabled>Select</option>
+                    @foreach (var item in @ViewBag.ProductUnit)
+                    {
+                        <option selected="@(checkProUnitId("@item.Id"))" value="{@item.Id}">@item.Name</option>
+                    }
+                </select>
+                <span class="text-danger">@Html.ValidationMessage("ProUnit Id")</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Category Id:</td>
+            <td>
+                <select class="form-control" name="CategoryId">
+                    <option selected disabled>Select</option>
+                    @foreach (var item in @ViewBag.Category)
+                    {
+                        <option selected="@(checkCategoryId("@item.Id"))" value="{@item.Id}">@item.Name</option>
+                    }
+                </select>
+                <span class="text-danger">@Html.ValidationMessage("Category Id")</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Band Id:</td>
+            <td>
+                <select class="form-control" name="BandId">
+                    <option selected disabled>Select</option>
+                    @foreach (var item in @ViewBag.Band)
+                    {
+                        <option selected="@(checkProUnitId("@item.Id"))" value="{@item.Id}">@item.Name</option>
+                    }
+                </select>
+                <span class="text-danger">@Html.ValidationMessage("Band Id")</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Gig Id:</td>
+            <td>
+                <select class="form-control" name="GigId">
+                    <option selected disabled>Select</option>
+                    @foreach (var item in @ViewBag.Gig)
+                    {
+                        <option selected="@(checkGigId("@item.Id"))" value="{@item.Id}">@item.Name</option>
+                    }
+                </select>
+                <span class="text-danger">@Html.ValidationMessage("Gig Id")</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="submit" class="btn btn-success" value="Delete" />
+            </td>
+        </tr>
+    </table>
+
+</form>

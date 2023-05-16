@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "DeleteCustomer";
+    Layout = "~/Views/Shared/_Employee.cshtml";
+}
+<h2>DeleteCustomer</h2>
+
+@{
+    bool checkIsActive(string prof)
+    {
+        if (Model != null && Model.IsActive != null)
+        {
+            if (prof.Equals(Model.IsActive)) return true;
+        }
+        return false;
+    }
+}
+
+
+
+<form method="post">
+    <table class="table table-hover">
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="text" name="Name" value="@(Model == null ? "":Model.Name)" />
+                <span class="text-danger">@Html.ValidationMessage("Name")</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Address:</td>
+            <td>
+                <input type="text" name="Address" value="@(Model == null ? "":Model.Address)" />
+                <span class="text-danger">@Html.ValidationMessage("Address")</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>PhoneNo:</td>
+            <td>
+                <input type="number" name="PhoneNo" value="@(Model == null ? "":Model.PhoneNo)" />
+                <span class="text-danger">@Html.ValidationMessage("PhoneNo")</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Email:</td>
+            <td>
+                <input type="text" name="Email" value="@(Model == null ? "":Model.Email)" />
+                <span class="text-danger">@Html.ValidationMessage("Email")</span>
+            </td>
+        </tr>
+        <tr>
+            <td>IsActive:</td>
+            <td>
+                <input type="radio" checked=@(checkIsActive("true")) name="IsActive" value="True" />Yes
+                <input type="radio" checked=@(checkIsActive("false")) name="IsActive" value="False" />No
+                <span class="text-danger">@Html.ValidationMessage("IsActive")</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="submit" class="btn btn-success" value="Delete" />
+            </td>
+        </tr>
+    </table>
+</form>

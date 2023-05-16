@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "EditBandManager";
+    Layout = "~/Views/Shared/_Employee.cshtml";
+}
+
+
+
+<h2>EditBandManager</h2>
+
+@{
+    bool checkBandId(string bandId)
+    {
+        if (Model != null && Model.BandId != null)
+        {
+            if (bandId.Equals(Model.BandId)) return true;
+        }
+        return false;
+    }
+}
+@{
+    bool checkUserId(string userId)
+    {
+        if (Model != null && Model.UserId != null)
+        {
+            if (userId.Equals(Model.UserId)) return true;
+        }
+        return false;
+    }
+}
+<form method="post">
+    <table class="table table-hover">
+        <tr>
+            <td>BandManager Id:</td>
+            <td>
+                <select class="form-control" name="BandManagerId">
+                    <option selected disabled>Select</option>
+                    @foreach (var item in @ViewBag.ProductUnit)
+                    {
+                        <option selected="@(checkBandManagerId("@item.Id"))" value="{@item.Id}">@item.Name</option>
+                    }
+                </select>
+                <span class="text-danger">@Html.ValidationMessage("BandManager Id")</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Band Id:</td>
+            <td>
+                <select class="form-control" name="BandId">
+                    <option selected disabled>Select</option>
+                    @foreach (var item in @ViewBag.Band)
+                    {
+                        <option selected="@(checkBandId("@item.Id"))" value="{@item.Id}">@item.Name</option>
+                    }
+                </select>
+                <span class="text-danger">@Html.ValidationMessage("Band Id")</span>
+            </td>
+        </tr>
+        <tr>
+            <td>User Id:</td>
+            <td>
+                <select class="form-control" name="UserId">
+                    <option selected disabled>Select</option>
+                    @foreach (var item in @ViewBag.User)
+                    {
+                        <option selected="@(checkUserId("@item.Id"))" value="{@item.Id}">@item.Name</option>
+                    }
+                </select>
+                <span class="text-danger">@Html.ValidationMessage("User Id")</span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" class="btn btn-success" value="Edit" />
+            </td>
+        </tr>
+    </table>
+
+</form>

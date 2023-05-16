@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "DeleteUnit";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>DeleteUnit</h2>
+
+
+@{
+    bool checkIsActive(string prof)
+    {
+        if (Model != null && Model.IsActive != null)
+        {
+            if (prof.Equals(Model.IsActive)) return true;
+        }
+        return false;
+    }
+}
+
+
+<form method="post">
+    <table class="table table-hover">
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="text" name="Name" value="@(Model == null ? "":Model.Name)" />
+                <span class="text-danger">@Html.ValidationMessage("Name")</span>
+            </td>
+        </tr>
+        <tr>
+            <td>IsActive :</td>
+            <td>
+                <input type="radio" checked=@(checkIsActive("true")) name="IsActive" value="true" />True
+                <input type="radio" checked=@(checkIsActive("false")) name="IsActive" value="false" />False
+                <span class="text-danger">@Html.ValidationMessage("IsActive")</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="submit" class="btn btn-success" value="Delete" />
+            </td>
+        </tr>
+
+    </table>
+
+</form>

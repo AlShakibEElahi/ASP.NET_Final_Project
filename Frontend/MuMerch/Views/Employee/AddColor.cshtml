@@ -3,19 +3,55 @@
     ViewBag.Title = "AddColor";
     Layout = "~/Views/Shared/_Employee.cshtml";
 }
+<br />
+<br />
+<br />
+<h2>Add Color</h2>
 
-<h2>AddColor</h2>
+@{
+    bool checkIsActive(string prof)
+    {
+        if (Model != null && Model.IsActive != null)
+        {
+            if (prof.Equals(Model.IsActive)) return true;
+        }
+        return false;
+    }
+}
+
+
+
 <form method="post">
-    Name:<br /><input type="text" name="Name" /><br />
-    <span class="text-danger">@Html.ValidationMessage("Name")</span><br />
-    Color Code:<br /><input type="color" name="ColorCode" /><br />
-    <span class="text-danger">@Html.ValidationMessage("Image")</span><br />
-    Is Active:<br /><select class="form-control" name="IsActive">
-        <option selected disabled>Select</option>
-        <option value="true">Yes</option>
-        <option value="false">No</option>
-    </select>
-    <span class="text-danger">@Html.ValidationMessage("IsActive")</span><br />
-    <input type="submit" class="btn btn-success" value="Submit" />
-</form>
+    <table class="table table-hover">
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="text" name="Name" value="@(Model == null ? "":Model.Name)" />
+                <span class="text-danger">@Html.ValidationMessage("Name")</span>
+            </td>
+        </tr>
 
+        <tr>
+            <td>ColorCode :</td>
+            <td>
+                <input type="color" name="ColorCode " value="@(Model == null ? "":Model.ColorCode )" />
+                <span class="text-danger">@Html.ValidationMessage("ColorCode ")</span>
+            </td>
+        </tr>
+
+        <td>IsActive :</td>
+        <td>
+            <input type="radio" checked=@(checkIsActive("true")) name="IsActive" value="true" />Yes
+            <input type="radio" checked=@(checkIsActive("false")) name="IsActive" value="false" />No
+            <span class="text-danger">@Html.ValidationMessage("IsActive")</span>
+        </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="submit" class="btn btn-success" value="Add" />
+            </td>
+        </tr>
+    </table>
+
+</form>

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<MuMerch.Models.GigManager>
+
+@{
+    ViewBag.Title = "GigManagerList";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>GigManagerList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddGigManager")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GigId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.GigId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditGigManager", new { id=item.GigManagerId }) |
+            @Html.ActionLink("Delete", "DeleteGigManager", new { id=item.GigManagerId })
+        </td>
+    </tr>
+}
+
+</table>
