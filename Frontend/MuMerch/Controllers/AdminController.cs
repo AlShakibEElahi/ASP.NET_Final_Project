@@ -1,4 +1,5 @@
 ﻿using MuMerch.Clients;
+using MuMerch.Cus_Auth;
 using MuMerch.Models;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Web.Mvc;
 
 namespace MuMerch.Controllers
 {
+    [AdminAccess]
     public class AdminController : Controller
     {
         // GET: Admin

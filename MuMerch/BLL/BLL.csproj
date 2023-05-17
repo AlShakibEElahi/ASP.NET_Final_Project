@@ -63,6 +63,7 @@
     <Compile Include="DTOs\ProductDTO.cs" />
     <Compile Include="DTOs\ProductOrderMapDTO.cs" />
     <Compile Include="DTOs\ProductSizeMapDTO.cs" />
+    <Compile Include="DTOs\ProductsSalesDataDTO.cs" />
     <Compile Include="DTOs\ProductUnitDTO.cs" />
     <Compile Include="DTOs\SizeDTO.cs" />
     <Compile Include="DTOs\TokenDTO.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Services\ProductOrderMapService.cs" />
     <Compile Include="Services\ProductService.cs" />
     <Compile Include="Services\ProductSizeMapService.cs" />
+    <Compile Include="Services\ReportService.cs" />
     <Compile Include="Services\SizeService.cs" />
     <Compile Include="Services\UnitService.cs" />
     <Compile Include="Services\UserService.cs" />

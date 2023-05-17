@@ -56,5 +56,13 @@ namespace MuMerch.Controllers
                 return View();
             }
         }
+        [HttpGet]
+        public ActionResult Logout()
+        {
+            Session["UserType"] = null;
+            Session["Id"] = null;
+            Session["TokenKey"] = null;
+            return RedirectToAction("Index", "Auth");
+        }
     }
 }

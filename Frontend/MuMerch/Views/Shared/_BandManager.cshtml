@@ -23,14 +23,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Upcoming Gigs <span class="caret"></span></a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Band Management <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Band</a></li>
-                            <li><a href="#">Band Manager</a></li>
-                        </ul>
-                    </li>
-                    <li>@Html.ActionLink("Customer Management", "Customer", "Employee")</li>
+                    <li>@Html.ActionLink("Upcoming Gigs", "GigList", "GigManager")</li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Report <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -39,6 +32,7 @@
                             <li><a href="#">Monthly Product Sales</a></li>
                         </ul>
                     </li>
+                    <li>@Html.ActionLink("Logout", "Logout", "Auth")</li>
                 </ul>
             </div>
         </div>

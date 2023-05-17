@@ -161,10 +161,13 @@
     <Compile Include="Clients\MuMerchClientPost.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
-    <Compile Include="Controllers\BandController.cs" />
     <Compile Include="Controllers\BandManagerController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\GigManagerController.cs" />
+    <Compile Include="Cus_Auth\AdminAccess.cs" />
+    <Compile Include="Cus_Auth\BandManagerAccess.cs" />
+    <Compile Include="Cus_Auth\EmployeeAccess.cs" />
+    <Compile Include="Cus_Auth\GigManagerAccess.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -341,12 +344,14 @@
     <Content Include="Views\Employee\EditCustomer.cshtml" />
     <Content Include="Views\Employee\DeleteCustomer.cshtml" />
     <Content Include="Views\Employee\CustomerList.cshtml" />
+    <Content Include="Views\BandManager\Index.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\GigManager\Index.cshtml" />
+    <Content Include="Views\BandManager\UserList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\BandManager\" />
     <Folder Include="Views\Band\" />
-    <Folder Include="Views\GigManager\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

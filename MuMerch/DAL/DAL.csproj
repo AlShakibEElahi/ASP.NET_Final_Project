@@ -77,16 +77,14 @@
     <Compile Include="Entities\User.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IBaseRepo.cs" />
-    <Compile Include="Migrations\202305152138011_initdb.cs" />
-    <Compile Include="Migrations\202305152138011_initdb.designer.cs">
-      <DependentUpon>202305152138011_initdb.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202305152202514_initdb1.cs" />
-    <Compile Include="Migrations\202305152202514_initdb1.designer.cs">
-      <DependentUpon>202305152202514_initdb1.cs</DependentUpon>
+    <Compile Include="Interfaces\IReport.cs" />
+    <Compile Include="Migrations\202305160625331_Dbinit.cs" />
+    <Compile Include="Migrations\202305160625331_Dbinit.designer.cs">
+      <DependentUpon>202305160625331_Dbinit.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MMContext.cs" />
+    <Compile Include="Models\ProductsSalesData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\BandManagerRepo.cs" />
     <Compile Include="Repos\BandRepo.cs" />
@@ -107,6 +105,7 @@
     <Compile Include="Repos\ProductOrderMapRepo.cs" />
     <Compile Include="Repos\ProductRepo.cs" />
     <Compile Include="Repos\ProductSizeMapRepo.cs" />
+    <Compile Include="Repos\ReportRepo.cs" />
     <Compile Include="Repos\SizeRepo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />
     <Compile Include="Repos\UnitRepo.cs" />
@@ -117,11 +116,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202305152138011_initdb.resx">
-      <DependentUpon>202305152138011_initdb.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202305152202514_initdb1.resx">
-      <DependentUpon>202305152202514_initdb1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202305160625331_Dbinit.resx">
+      <DependentUpon>202305160625331_Dbinit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -109,5 +109,9 @@ namespace DAL
         {
             return new OrderRepo();
         }
+        //public static IReport<int, DateTime, ProductOrderMap, ProductOrderMap, ProductsSalesData> ReportContent()
+        //{
+           // return new ReportRepo();
+        //}
     }
 }

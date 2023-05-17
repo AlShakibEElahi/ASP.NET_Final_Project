@@ -1,4 +1,5 @@
 ﻿using MuMerch.Clients;
+using MuMerch.Cus_Auth;
 using MuMerch.Models;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Web.Mvc;
 
 namespace MuMerch.Controllers
 {
+    [EmployeeAccess]
     public class EmployeeController : Controller
     {
         // GET: Employee

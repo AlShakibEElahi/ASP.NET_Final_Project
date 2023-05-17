@@ -1,5 +1,6 @@
 ﻿using BLL.DTOs;
 using BLL.Services;
+using MuMerchAPI.Auth;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ using System.Web.Http.Cors;
 
 namespace MuMerchAPI.Controllers
 {
+    [Logged]
     [EnableCors("*", "*", "*")]
     public class BandController : ApiController
     {
